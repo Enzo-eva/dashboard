@@ -14,16 +14,13 @@ header{text-align:center;margin-bottom:24px;padding-top:12px}
 .logo{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--grigio);margin-bottom:2px}
 .tagline{font-size:0.72rem;font-weight:600;color:var(--celeste-dark);letter-spacing:2px;text-transform:uppercase}
 .update-bar{display:flex;align-items:center;justify-content:center;gap:8px;font-size:0.75rem;color:var(--grigio-medio);margin-top:10px}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--verde)}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--verde);display:inline-block}
 
-/* HERO: il guadagno reale */
 .hero{background:linear-gradient(135deg,var(--celeste-dark) 0%,#4a8aa8 100%);border-radius:20px;padding:32px 24px;color:white;margin-bottom:16px;box-shadow:0 8px 24px rgba(90,155,184,0.25)}
 .hero-label{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;opacity:0.85;margin-bottom:8px}
-.hero-value{font-family:'DM Serif Display',serif;font-size:3.2rem;line-height:1;margin-bottom:12px}
-.hero-sub{font-size:0.85rem;opacity:0.9;display:flex;align-items:center;gap:6px}
-.hero-status{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.2);padding:6px 12px;border-radius:20px;font-size:0.78rem;font-weight:600;margin-top:14px}
+.hero-value{font-family:'DM Serif Display',serif;font-size:3.2rem;line-height:1;margin-bottom:8px}
+.hero-sub{font-size:0.85rem;opacity:0.9}
 
-/* Progress bar break-even */
 .breakeven-card{background:var(--bianco);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,0.05)}
 .be-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
 .be-title{font-size:0.78rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--grigio-medio)}
@@ -33,7 +30,6 @@ header{text-align:center;margin-bottom:24px;padding-top:12px}
 .be-info{display:flex;justify-content:space-between;font-size:0.78rem;color:var(--grigio-medio)}
 .be-info strong{color:var(--grigio)}
 
-/* Grid 2x2 metriche */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
 .card{background:var(--bianco);border-radius:16px;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,0.05)}
 .card-icon{font-size:1.4rem;margin-bottom:8px}
@@ -46,17 +42,19 @@ header{text-align:center;margin-bottom:24px;padding-top:12px}
 .card.netto .card-value{color:var(--verde)}
 .card.lordo{background:linear-gradient(135deg,#eff6ff,#dbeafe)}
 .card.lordo .card-value{color:#2563eb}
+.card.entrate{background:linear-gradient(135deg,#f0fdf4,#d1fae5)}
+.card.entrate .card-value{color:#059669}
 .card.costi{background:linear-gradient(135deg,#fffbeb,#fef3c7)}
 .card.costi .card-value{color:#d97706}
+.card.variabili{background:linear-gradient(135deg,#fdf4ff,#f3e8ff)}
+.card.variabili .card-value{color:#7c3aed}
 
-/* Mese selector */
 .mese-section{background:var(--bianco);border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 2px 12px rgba(0,0,0,0.05)}
 .section-title{font-size:0.78rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--celeste-dark);margin-bottom:14px}
 .mese-tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:16px;-webkit-overflow-scrolling:touch}
 .mese-tab{padding:7px 14px;border-radius:20px;font-size:0.8rem;font-weight:600;cursor:pointer;border:none;background:var(--grigio-chiaro);color:var(--grigio-medio);white-space:nowrap;flex-shrink:0}
 .mese-tab.active{background:var(--grigio);color:white}
 
-/* Top clienti */
 .cliente-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #f0f0f0}
 .cliente-row:last-child{border-bottom:none}
 .rank{width:28px;height:28px;border-radius:50%;background:var(--celeste-light);color:var(--celeste-dark);font-weight:700;font-size:0.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -65,16 +63,13 @@ header{text-align:center;margin-bottom:24px;padding-top:12px}
 .rank.bronze{background:#fed7aa;color:#c2410c}
 .cliente-info{flex:1;min-width:0}
 .cliente-name{font-size:0.92rem;font-weight:600;color:var(--grigio);text-transform:capitalize;margin-bottom:2px}
-.cliente-meta{font-size:0.72rem;color:var(--grigio-medio)}
+.cliente-netto{font-size:0.72rem;color:var(--grigio-medio)}
 .cliente-amount{text-align:right;flex-shrink:0}
-.cliente-totale{font-size:0.95rem;font-weight:700;color:var(--grigio)}
-.cliente-margine{font-size:0.72rem;color:var(--verde);font-weight:600}
+.cliente-lordo{font-size:0.95rem;font-weight:700;color:var(--grigio)}
+.cliente-iva{font-size:0.72rem;color:var(--rosso);font-weight:600}
 
 .refresh-btn{display:block;margin:20px auto;padding:10px 24px;background:var(--bianco);color:var(--grigio);border:1px solid var(--grigio-chiaro);border-radius:24px;font-size:0.82rem;font-family:'DM Sans',sans-serif;font-weight:600;cursor:pointer}
-.refresh-btn:hover{background:var(--grigio-chiaro)}
-
 footer{text-align:center;font-size:0.7rem;color:var(--grigio-medio);margin-top:24px;padding-bottom:20px}
-.skeleton{background:#f0f0f0;border-radius:8px;height:20px;margin:4px 0}
 @media(max-width:500px){.hero-value{font-size:2.4rem}.card-value{font-size:1.3rem}}
 </style>
 </head>
@@ -86,15 +81,15 @@ footer{text-align:center;font-size:0.7rem;color:var(--grigio-medio);margin-top:2
 <div class="update-bar"><div class="dot" id="statusDot"></div><span id="statusText">Caricamento...</span></div>
 </header>
 
-<div class="hero" id="hero">
-<div class="hero-label">💰 Guadagno Reale del Mese</div>
+<div class="hero">
+<div class="hero-label">💰 Risultato Reale del Mese</div>
 <div class="hero-value" id="heroValue">€ ---</div>
 <div class="hero-sub" id="heroSub">Calcolo in corso...</div>
 </div>
 
 <div class="breakeven-card">
 <div class="be-header">
-<div class="be-title">📊 Break-Even</div>
+<div class="be-title">📊 Copertura Costi</div>
 <div class="be-perc" id="bePerc">--%</div>
 </div>
 <div class="be-bar"><div class="be-fill" id="beFill" style="width:0%"></div></div>
@@ -103,29 +98,32 @@ footer{text-align:center;font-size:0.7rem;color:var(--grigio-medio);margin-top:2
 
 <div class="grid2">
 <div class="card lordo"><div class="card-icon">💵</div><div class="card-label">Fatturato Lordo</div><div class="card-value" id="cardLordo">€ ---</div><div class="card-sub">Con IVA inclusa</div></div>
-<div class="card netto"><div class="card-icon">💎</div><div class="card-label">Netto Incassato</div><div class="card-value" id="cardNetto">€ ---</div><div class="card-sub">Senza IVA</div></div>
+<div class="card netto"><div class="card-icon">💎</div><div class="card-label">Netto Vendite</div><div class="card-value" id="cardNetto">€ ---</div><div class="card-sub">Senza IVA</div></div>
+<div class="card entrate"><div class="card-icon">🔄</div><div class="card-label">Entrate Ricorrenti</div><div class="card-value" id="cardEntrate">€ ---</div><div class="card-sub">Noleggi, abbonamenti</div></div>
 <div class="card iva"><div class="card-icon">🏛️</div><div class="card-label">IVA da Versare</div><div class="card-value" id="cardIva">€ ---</div><div class="card-sub">Allo Stato</div></div>
-<div class="card costi"><div class="card-icon">💸</div><div class="card-label">Costi Totali</div><div class="card-value" id="cardCosti">€ ---</div><div class="card-sub">Merce + fissi</div></div>
+<div class="card costi"><div class="card-icon">📌</div><div class="card-label">Costi Fissi</div><div class="card-value" id="cardFissi">€ ---</div><div class="card-sub">Mensili fissi</div></div>
+<div class="card variabili"><div class="card-icon">📦</div><div class="card-label">Costi Variabili</div><div class="card-value" id="cardVariabili">€ ---</div><div class="card-sub">Del mese</div></div>
 </div>
 
 <div class="mese-section">
 <div class="section-title">📅 Seleziona Mese</div>
 <div class="mese-tabs" id="meseTabs"></div>
-<div class="section-title">🏆 Top Clienti</div>
-<div id="topClienti"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
+<div class="section-title">🏆 Clienti del Mese</div>
+<div id="topClienti"></div>
 </div>
 
 <button class="refresh-btn" onclick="loadAll()">↻ Aggiorna dati</button>
-<footer>Skinem Group · Aggiornamento automatico ogni 5 min</footer>
+<footer>Skinem Group · Auto-refresh ogni 5 min</footer>
 </div>
 
 <script>
-const COSTI_ID='1fjh4ZT7SxtPn0D3ojJ1DptWR2IsYc4Y9kECUgFwzYCQ';
+const COSTI_ID='1T97zB3QSLzSLctdiWH10mFzTpR0C7sP0';
 const VENDITE_ID='19011LKl-DC3sQTITIigeKGadrl1HhZJPyioWYBoeDEI';
 const MESI=['Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
 let meseAttivo='Maggio';
 let datiVendite={};
-let totaleCosti=0;
+let costiFissi=0;
+let entrateRicorrenti=0;
 
 function fEur(n){return'€ '+Math.round(n).toLocaleString('it-IT')}
 function parseGSheet(text){const s=text.indexOf('{');const e=text.lastIndexOf('}');return JSON.parse(text.substring(s,e+1))}
@@ -135,52 +133,66 @@ async function fetchSheet(id,sheet){
   const res=await fetch(url);const text=await res.text();return parseGSheet(text);
 }
 
+async function getCostiVariabili(mese){
+  try{
+    const data=await fetchSheet(COSTI_ID,mese);
+    let tot=0;
+    for(const row of data.table.rows){
+      const val=parseFloat(row.c[1]?.v)||0;
+      if(row.c[0]?.v&&val>0)tot+=val;
+    }
+    return tot;
+  }catch(e){return 0;}
+}
+
 function renderMese(mese){
   meseAttivo=mese;
   document.querySelectorAll('.mese-tab').forEach(t=>t.classList.toggle('active',t.dataset.mese===mese));
+  aggiornaMese(mese);
+}
+
+async function aggiornaMese(mese){
   const righe=datiVendite[mese]||[];
-  
-  // Calcoli mese selezionato
-  let totLordo=0,totNetto=0,totIva=0,totCosto=0;
+  const costiVar=await getCostiVariabili(mese);
+
+  let totLordo=0,totNetto=0,totIva=0;
   const clientiCalc=righe.map(r=>{
-    const netto=r.lordo/(1+r.iva/100);
+    const netto=r.iva>0?r.lordo/(1+r.iva/100):r.lordo;
     const iva=r.lordo-netto;
-    const margine=netto-r.costo;
-    totLordo+=r.lordo;totNetto+=netto;totIva+=iva;totCosto+=r.costo;
-    return{...r,netto,iva_eur:iva,margine,marginePerc:netto>0?(margine/netto)*100:0};
+    totLordo+=r.lordo;totNetto+=netto;totIva+=iva;
+    return{...r,netto,iva_eur:iva};
   });
-  
-  const margineLordo=totNetto-totCosto;
-  const guadagnoReale=margineLordo-totaleCosti;
-  const breakEven=totaleCosti+totCosto;
-  const percBE=breakEven>0?Math.min((totNetto/breakEven)*100,100):0;
-  const manca=Math.max(breakEven-totNetto,0);
-  
-  // HERO
-  document.getElementById('heroValue').textContent=fEur(guadagnoReale);
-  const heroSub=document.getElementById('heroSub');
-  if(guadagnoReale>=0){
-    heroSub.innerHTML=`✅ Sei in attivo questo mese — ${mese}`;
-  }else{
-    heroSub.innerHTML=`⚠️ In perdita di ${fEur(Math.abs(guadagnoReale))} — ${mese}`;
-  }
-  
-  // Break-even
-  document.getElementById('bePerc').textContent=Math.round(percBE)+'%';
-  document.getElementById('beFill').style.width=percBE+'%';
+
+  const totEntrate=entrateRicorrenti;
+  const totCostiTotali=costiFissi+costiVar;
+  const risultato=(totNetto+totEntrate)-totCostiTotali;
+  const percCop=totCostiTotali>0?Math.min(((totNetto+totEntrate)/totCostiTotali)*100,100):0;
+  const manca=Math.max(totCostiTotali-(totNetto+totEntrate),0);
+
+  // Hero
+  document.getElementById('heroValue').textContent=fEur(risultato);
+  document.getElementById('heroSub').innerHTML=risultato>=0
+    ?`✅ In attivo — ${mese}`
+    :`⚠️ In perdita di ${fEur(Math.abs(risultato))} — ${mese}`;
+
+  // Break-even bar
+  document.getElementById('bePerc').textContent=Math.round(percCop)+'%';
+  document.getElementById('beFill').style.width=percCop+'%';
   document.getElementById('beManca').textContent=fEur(manca);
-  document.getElementById('beTarget').textContent=fEur(breakEven);
-  
+  document.getElementById('beTarget').textContent=fEur(totCostiTotali);
+
   // Cards
   document.getElementById('cardLordo').textContent=fEur(totLordo);
   document.getElementById('cardNetto').textContent=fEur(totNetto);
+  document.getElementById('cardEntrate').textContent=fEur(totEntrate);
   document.getElementById('cardIva').textContent=fEur(totIva);
-  document.getElementById('cardCosti').textContent=fEur(totCosto+totaleCosti);
-  
-  // Top clienti ordinati
-  const sorted=clientiCalc.sort((a,b)=>b.netto-a.netto);
+  document.getElementById('cardFissi').textContent=fEur(costiFissi);
+  document.getElementById('cardVariabili').textContent=fEur(costiVar);
+
+  // Clienti ordinati per lordo
+  const sorted=clientiCalc.sort((a,b)=>b.lordo-a.lordo);
   if(sorted.length===0){
-    document.getElementById('topClienti').innerHTML='<p style="color:#888;font-size:0.9rem;text-align:center;padding:20px">Nessuna vendita per '+mese+'</p>';
+    document.getElementById('topClienti').innerHTML='<p style="color:#888;text-align:center;padding:20px;font-size:0.9rem">Nessuna vendita per '+mese+'</p>';
     return;
   }
   let html='';
@@ -191,11 +203,11 @@ function renderMese(mese){
       <div class="rank ${rankClass}">${medal}</div>
       <div class="cliente-info">
         <div class="cliente-name">${r.cliente}</div>
-        <div class="cliente-meta">Netto: ${fEur(r.netto)} · Costo: ${fEur(r.costo)}</div>
+        <div class="cliente-netto">Netto: ${fEur(r.netto)}</div>
       </div>
       <div class="cliente-amount">
-        <div class="cliente-totale">${fEur(r.lordo)}</div>
-        <div class="cliente-margine">+${fEur(r.margine)} (${Math.round(r.marginePerc)}%)</div>
+        <div class="cliente-lordo">${fEur(r.lordo)}</div>
+        <div class="cliente-iva">IVA: ${fEur(r.iva_eur)}</div>
       </div>
     </div>`;
   });
@@ -208,12 +220,25 @@ async function loadAll(){
   dot.style.background='#fbbf24';
   statusText.textContent='Caricamento...';
   try{
-    const costiData=await fetchSheet(COSTI_ID,'Foglio1');
-    totaleCosti=0;
-    for(const row of costiData.table.rows){
+    // Costi fissi
+    const fissiData=await fetchSheet(COSTI_ID,'Fissi');
+    costiFissi=0;
+    for(const row of fissiData.table.rows){
       const val=parseFloat(row.c[1]?.v)||0;
-      if(row.c[0]?.v&&val>0)totaleCosti+=val;
+      if(row.c[0]?.v&&val>0)costiFissi+=val;
     }
+
+    // Entrate ricorrenti
+    try{
+      const entrateData=await fetchSheet(COSTI_ID,'Entrate');
+      entrateRicorrenti=0;
+      for(const row of entrateData.table.rows){
+        const val=parseFloat(row.c[1]?.v)||0;
+        if(row.c[0]?.v&&val>0)entrateRicorrenti+=val;
+      }
+    }catch(e){entrateRicorrenti=0;}
+
+    // Vendite per mese
     datiVendite={};
     const mesiDisponibili=[];
     for(const mese of MESI){
@@ -225,19 +250,21 @@ async function loadAll(){
           const skinem=parseFloat(row.c[1]?.v)||0;
           const skinnate=parseFloat(row.c[2]?.v)||0;
           const iva=parseFloat(row.c[3]?.v)||0;
-          const costo=parseFloat(row.c[4]?.v)||0;
           const lordo=skinem+skinnate;
-          if(cliente&&lordo>0)righe.push({cliente:String(cliente),lordo,iva,costo});
+          if(cliente&&lordo>0)righe.push({cliente:String(cliente),lordo,iva});
         }
         if(righe.length>0){datiVendite[mese]=righe;mesiDisponibili.push(mese);}
       }catch(e){}
     }
+
     const tabsHtml=mesiDisponibili.map(m=>`<button class="mese-tab${m===meseAttivo?' active':''}" data-mese="${m}" onclick="renderMese('${m}')">${m}</button>`).join('');
     document.getElementById('meseTabs').innerHTML=tabsHtml;
+
     if(mesiDisponibili.length>0){
       if(!mesiDisponibili.includes(meseAttivo))meseAttivo=mesiDisponibili[mesiDisponibili.length-1];
-      renderMese(meseAttivo);
+      await aggiornaMese(meseAttivo);
     }
+
     dot.style.background='#10b981';
     statusText.textContent=`${mesiDisponibili.length} mesi · ${new Date().toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'})}`;
   }catch(err){
