@@ -7,43 +7,26 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --celeste:#5a9bb8;--celeste-light:#e8f3f7;
-  --grigio:#3a3a3a;--grigio-medio:#888;--grigio-chiaro:#f0f0f0;
-  --bg:#f5f8fa;--bianco:#ffffff;
-  --verde:#10b981;--rosso:#ef4444;--arancio:#f59e0b;
-}
+:root{--celeste:#5a9bb8;--celeste-light:#e8f3f7;--grigio:#3a3a3a;--grigio-medio:#888;--grigio-chiaro:#f0f0f0;--bg:#f5f8fa;--bianco:#ffffff;--verde:#10b981;--rosso:#ef4444;--arancio:#f59e0b}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--grigio);min-height:100vh;padding:16px}
 .container{max-width:720px;margin:0 auto}
-
-/* HEADER */
 header{text-align:center;padding:16px 0 20px}
 .logo{font-family:'DM Serif Display',serif;font-size:1.9rem;color:var(--grigio)}
 .tagline{font-size:0.7rem;font-weight:600;color:var(--celeste);letter-spacing:2px;text-transform:uppercase;margin-top:2px}
 .update-bar{display:flex;align-items:center;justify-content:center;gap:6px;font-size:0.75rem;color:var(--grigio-medio);margin-top:8px}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--grigio-chiaro)}
-.dot.ok{background:var(--verde)}
-.dot.err{background:var(--rosso)}
-.dot.loading{background:var(--arancio);animation:pulse 1s infinite}
+.dot.ok{background:var(--verde)}.dot.err{background:var(--rosso)}.dot.loading{background:var(--arancio);animation:pulse 1s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
-
-/* MESE TABS */
 .mese-bar{background:var(--bianco);border-radius:14px;padding:12px 14px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
 .mese-bar-label{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--grigio-medio);margin-bottom:8px}
 .mese-tabs{display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px}
 .mese-tab{padding:6px 13px;border-radius:20px;font-size:0.78rem;font-weight:600;cursor:pointer;border:none;background:var(--grigio-chiaro);color:var(--grigio-medio);white-space:nowrap;flex-shrink:0;transition:all .2s}
 .mese-tab.active{background:var(--grigio);color:#fff}
-.mese-tab:hover:not(.active){background:var(--celeste-light);color:var(--celeste)}
-
-/* HERO */
 .hero{border-radius:18px;padding:26px 22px;margin-bottom:14px;color:#fff;background:linear-gradient(135deg,var(--celeste),#3d7a96)}
-.hero.positivo{background:linear-gradient(135deg,#059669,#10b981)}
-.hero.negativo{background:linear-gradient(135deg,#dc2626,#ef4444)}
+.hero.pos{background:linear-gradient(135deg,#059669,#10b981)}.hero.neg{background:linear-gradient(135deg,#dc2626,#ef4444)}
 .hero-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;opacity:.85;margin-bottom:6px}
 .hero-value{font-family:'DM Serif Display',serif;font-size:3rem;line-height:1;margin-bottom:8px}
 .hero-sub{font-size:0.82rem;opacity:.9}
-
-/* BARRA COPERTURA */
 .cover-card{background:var(--bianco);border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
 .cover-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
 .cover-title{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--grigio-medio)}
@@ -52,9 +35,7 @@ header{text-align:center;padding:16px 0 20px}
 .bar-fill{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--celeste),var(--verde));transition:width 1s ease}
 .cover-info{display:flex;justify-content:space-between;font-size:0.73rem;color:var(--grigio-medio)}
 .cover-info strong{color:var(--grigio)}
-
-/* GRID CARD */
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
 .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
 .card{background:var(--bianco);border-radius:14px;padding:16px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
 .card-icon{font-size:1.2rem;margin-bottom:6px}
@@ -65,33 +46,20 @@ header{text-align:center;padding:16px 0 20px}
 .card.rosso-card{background:linear-gradient(135deg,#fff5f5,#fee2e2)}.card.rosso-card .card-value{color:#dc2626}
 .card.blu-card{background:linear-gradient(135deg,#eff6ff,#dbeafe)}.card.blu-card .card-value{color:#2563eb}
 .card.arancio-card{background:linear-gradient(135deg,#fffbeb,#fef3c7)}.card.arancio-card .card-value{color:#d97706}
-.card.viola-card{background:linear-gradient(135deg,#fdf4ff,#f3e8ff)}.card.viola-card .card-value{color:#7c3aed}
-
-/* SEZIONI */
 .section{background:var(--bianco);border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
 .section-title{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--celeste);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--celeste-light)}
-
-/* LISTA ITEMS */
 .item-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #f5f5f5}
 .item-row:last-child{border-bottom:none}
 .item-rank{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0;background:var(--celeste-light);color:var(--celeste)}
-.item-rank.gold{background:#fef3c7;color:#d97706}
-.item-rank.silver{background:#e5e7eb;color:#6b7280}
-.item-rank.bronze{background:#fed7aa;color:#c2410c}
+.item-rank.gold{background:#fef3c7;color:#d97706}.item-rank.silver{background:#e5e7eb;color:#6b7280}.item-rank.bronze{background:#fed7aa;color:#c2410c}
 .item-info{flex:1;min-width:0}
 .item-name{font-size:0.88rem;font-weight:600;color:var(--grigio);text-transform:capitalize}
 .item-sub{font-size:0.7rem;color:var(--grigio-medio);margin-top:1px}
 .item-amount{text-align:right;flex-shrink:0}
 .item-main{font-size:0.9rem;font-weight:700;color:var(--grigio)}
 .item-sec{font-size:0.68rem;color:var(--grigio-medio)}
-.badge{display:inline-block;padding:2px 7px;border-radius:10px;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
-.badge.verde{background:#d1fae5;color:#059669}
-.badge.rosso{background:#fee2e2;color:#dc2626}
-.badge.grigio{background:#f3f4f6;color:#6b7280}
-
-/* SCADENZE */
-.scadenza-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #f5f5f5}
-.scadenza-row:last-child{border-bottom:none}
+.scad-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #f5f5f5}
+.scad-row:last-child{border-bottom:none}
 .scad-date{width:44px;text-align:center;flex-shrink:0}
 .scad-day{font-size:1.2rem;font-weight:700;color:var(--grigio);line-height:1}
 .scad-month{font-size:0.6rem;font-weight:600;text-transform:uppercase;color:var(--grigio-medio)}
@@ -101,12 +69,9 @@ header{text-align:center;padding:16px 0 20px}
 .scad-amount{text-align:right;flex-shrink:0}
 .scad-lordo{font-size:0.9rem;font-weight:700;color:var(--rosso)}
 .scad-netto{font-size:0.68rem;color:var(--grigio-medio)}
-.urgente{color:var(--rosso) !important}
-
-/* BOTTONE */
+.badge{display:inline-block;padding:2px 7px;border-radius:10px;font-size:0.65rem;font-weight:700}
+.badge.verde{background:#d1fae5;color:#059669}.badge.rosso{background:#fee2e2;color:#dc2626}.badge.grigio{background:#f3f4f6;color:#6b7280}
 .refresh-btn{display:block;margin:16px auto 24px;padding:10px 24px;background:var(--bianco);color:var(--grigio);border:1.5px solid var(--grigio-chiaro);border-radius:24px;font-size:0.82rem;font-family:'DM Sans',sans-serif;font-weight:600;cursor:pointer}
-.refresh-btn:hover{background:var(--grigio-chiaro)}
-
 .empty{text-align:center;color:var(--grigio-medio);font-size:0.85rem;padding:16px 0}
 footer{text-align:center;font-size:0.68rem;color:var(--grigio-medio);padding-bottom:20px}
 @media(max-width:480px){.hero-value{font-size:2.4rem}.card-value{font-size:1.3rem}.grid3{grid-template-columns:1fr 1fr}}
@@ -114,14 +79,10 @@ footer{text-align:center;font-size:0.68rem;color:var(--grigio-medio);padding-bot
 </head>
 <body>
 <div class="container">
-
 <header>
   <div class="logo">Skinem Group</div>
   <div class="tagline">Business Dashboard 2026</div>
-  <div class="update-bar">
-    <div class="dot loading" id="dot"></div>
-    <span id="statusText">Caricamento...</span>
-  </div>
+  <div class="update-bar"><div class="dot loading" id="dot"></div><span id="st">Caricamento...</span></div>
 </header>
 
 <div class="mese-bar">
@@ -136,22 +97,15 @@ footer{text-align:center;font-size:0.68rem;color:var(--grigio-medio);padding-bot
 </div>
 
 <div class="cover-card">
-  <div class="cover-head">
-    <div class="cover-title">📊 Copertura costi</div>
-    <div class="cover-perc" id="coverPerc">--%</div>
-  </div>
+  <div class="cover-head"><div class="cover-title">📊 Copertura costi</div><div class="cover-perc" id="coverPerc">--%</div></div>
   <div class="bar-bg"><div class="bar-fill" id="barFill" style="width:0%"></div></div>
-  <div class="cover-info">
-    <span>Mancano: <strong id="coverManca">€ ---</strong></span>
-    <span>Target: <strong id="coverTarget">€ ---</strong></span>
-  </div>
+  <div class="cover-info"><span>Mancano: <strong id="coverManca">€ ---</strong></span><span>Target: <strong id="coverTarget">€ ---</strong></span></div>
 </div>
 
 <div class="grid2">
   <div class="card blu-card"><div class="card-icon">💵</div><div class="card-label">Fatturato Lordo</div><div class="card-value" id="cLordo">€ ---</div><div class="card-sub">Con IVA</div></div>
   <div class="card verde-card"><div class="card-icon">💎</div><div class="card-label">Netto Vendite</div><div class="card-value" id="cNetto">€ ---</div><div class="card-sub">Senza IVA</div></div>
 </div>
-
 <div class="grid3">
   <div class="card verde-card"><div class="card-icon">🔄</div><div class="card-label">Entrate Ricorr.</div><div class="card-value" id="cEntrate">€ ---</div><div class="card-sub">Mese</div></div>
   <div class="card arancio-card"><div class="card-icon">📌</div><div class="card-label">Costi Fissi</div><div class="card-value" id="cFissi">€ ---</div><div class="card-sub">Mensili</div></div>
@@ -162,12 +116,10 @@ footer{text-align:center;font-size:0.68rem;color:var(--grigio-medio);padding-bot
   <div class="section-title">🏆 Clienti del Mese</div>
   <div id="listVendite"><div class="empty">Caricamento...</div></div>
 </div>
-
 <div class="section">
   <div class="section-title">🔄 Entrate Ricorrenti</div>
   <div id="listEntrate"><div class="empty">Caricamento...</div></div>
 </div>
-
 <div class="section">
   <div class="section-title">⚠️ Scadenze Fornitori</div>
   <div id="listUscite"><div class="empty">Caricamento...</div></div>
@@ -176,268 +128,200 @@ footer{text-align:center;font-size:0.68rem;color:var(--grigio-medio);padding-bot
 <button class="refresh-btn" onclick="loadAll()">↻ Aggiorna</button>
 <footer>Skinem Group · Auto-refresh ogni 5 min</footer>
 </div>
-
 <script>
-const VENDITE_ID = '18d0ac4e_Pt0Dj7LW5W2ekctNEMs9_0AxZFSQ3NHE_mc';
-const DATI_ID    = '11Ie9YF_EwYs_3rdX74KIgXjBC--cKEsepz7NPq56r7g';
+// ⚠️ INSERISCI QUI L'ID DEL TUO UNICO GOOGLE SHEET
+const SHEET_ID = '1Urb5pmqS4lLQOMkkitNiiMe4D_IJelRyvAl3FHPeJ-s';
+
 const MESI = ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'];
 const MESI_NUM = {Gennaio:0,Febbraio:1,Marzo:2,Aprile:3,Maggio:4,Giugno:5,Luglio:6,Agosto:7,Settembre:8,Ottobre:9,Novembre:10,Dicembre:11};
 
-let meseAttivo = 'Giugno';
-let allData = { vendite:{}, fissi:0, entrate:[], uscite:[] };
+let meseAttivo = 'Maggio';
+let DB = {vendite:[], fissi:0, entrate:[], uscite:[]};
 
-function fEur(n){ return '€ ' + Math.round(n).toLocaleString('it-IT') }
+function fEur(n){ return '€ ' + Math.round(n||0).toLocaleString('it-IT') }
 function parseGSheet(text){ const s=text.indexOf('{'); const e=text.lastIndexOf('}'); return JSON.parse(text.substring(s,e+1)) }
-
-// Parsing date dalla gviz API
 function parseGvizDate(val){
   if(!val) return null;
-  const s = String(val);
-  const m = s.match(/Date\((\d+),(\d+),(\d+)\)/);
-  if(m) return new Date(parseInt(m[1]), parseInt(m[2]), parseInt(m[3]));
-  if(!isNaN(s)){
-    const d = new Date(1899,11,30);
-    d.setDate(d.getDate() + parseInt(s));
-    return d;
-  }
-  // Formato DD/MM/YYYY
-  const p = s.split('/');
-  if(p.length===3) return new Date(parseInt(p[2]), parseInt(p[1])-1, parseInt(p[0]));
+  const s=String(val);
+  const m=s.match(/Date\((\d+),(\d+),(\d+)\)/);
+  if(m) return new Date(parseInt(m[1]),parseInt(m[2]),parseInt(m[3]));
+  if(!isNaN(s)){ const d=new Date(1899,11,30); d.setDate(d.getDate()+parseInt(s)); return d; }
+  const p=s.split('/');
+  if(p.length===3) return new Date(parseInt(p[2]),parseInt(p[1])-1,parseInt(p[0]));
   return null;
 }
 
-async function fetchSheet(id, sheet){
-  const url = `https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(sheet)}`;
-  const res = await fetch(url);
-  const text = await res.text();
-  return parseGSheet(text);
+async function fetchSheet(sheet){
+  const url=`https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(sheet)}`;
+  const res=await fetch(url); const text=await res.text(); return parseGSheet(text);
 }
 
 async function loadAll(){
-  const dot = document.getElementById('dot');
-  const st  = document.getElementById('statusText');
+  const dot=document.getElementById('dot'); const st=document.getElementById('st');
   dot.className='dot loading'; st.textContent='Caricamento...';
-
-  try {
-    // 1. COSTI FISSI
-    const fissiData = await fetchSheet(DATI_ID,'Fissi');
-    let fissi = 0;
+  try{
+    // FISSI
+    const fissiData=await fetchSheet('Fissi');
+    DB.fissi=0;
     for(const row of fissiData.table.rows){
-      const val = parseFloat(row.c[1]?.v)||0;
-      if(row.c[0]?.v && val>0) fissi += val;
+      const v=parseFloat(row.c[1]?.v)||0;
+      if(row.c[0]?.v&&v>0) DB.fissi+=v;
     }
-    allData.fissi = fissi;
 
-    // 2. ENTRATE RICORRENTI
-    try {
-      const entrateData = await fetchSheet(DATI_ID,'Entrate');
-      allData.entrate = [];
+    // VENDITE
+    const venditeData=await fetchSheet('Vendite');
+    DB.vendite=[];
+    for(const row of venditeData.table.rows){
+      const mese=row.c[0]?.v;
+      const cliente=row.c[1]?.v;
+      const skinem=parseFloat(row.c[2]?.v)||0;
+      const skinn=parseFloat(row.c[3]?.v)||0;
+      const iva=parseFloat(row.c[4]?.v)||22;
+      const lordo=skinem+skinn;
+      if(mese&&cliente&&lordo>0) DB.vendite.push({mese:String(mese),cliente:String(cliente),lordo,iva});
+    }
+
+    // ENTRATE
+    try{
+      const entrateData=await fetchSheet('Entrate');
+      DB.entrate=[];
       for(const row of entrateData.table.rows){
-        const desc   = row.c[0]?.v;
-        const imp    = parseFloat(row.c[1]?.v)||0;
-        const tipo   = row.c[2]?.v||'';
-        const mese   = row.c[3]?.v||'';
-        const data   = row.c[4]?.v||'';
-        const inc    = row.c[5]?.v||'NO';
-        if(desc && imp>0) allData.entrate.push({desc:String(desc),imp,tipo,mese:String(mese),data:String(data),incassato:String(inc).toUpperCase()==='SI'});
+        const mese=row.c[0]?.v;
+        const desc=row.c[1]?.v;
+        const imp=parseFloat(row.c[2]?.v)||0;
+        const tipo=row.c[3]?.v||'';
+        const inc=row.c[4]?.v||'NO';
+        if(mese&&desc&&imp>0) DB.entrate.push({mese:String(mese),desc:String(desc),imp,tipo:String(tipo),incassato:String(inc).toUpperCase()==='SI'});
       }
-    } catch(e){ allData.entrate = []; }
+    }catch(e){DB.entrate=[];}
 
-    // 3. USCITE (SCADENZE FORNITORI)
-    try {
-      const usciteData = await fetchSheet(DATI_ID,'Uscite');
-      allData.uscite = [];
+    // USCITE
+    try{
+      const usciteData=await fetchSheet('Uscite');
+      DB.uscite=[];
       for(const row of usciteData.table.rows){
-        const forn   = row.c[0]?.v;
-        const desc   = row.c[1]?.v||'';
-        const nfatt  = row.c[2]?.v||'';
-        const netto  = parseFloat(row.c[3]?.v)||0;
-        const iva    = parseFloat(row.c[4]?.v)||0;
-        const lordo  = parseFloat(row.c[5]?.v)||0;
-        const scad   = parseGvizDate(row.c[8]?.v);
-        const pagato = row.c[9]?.v||'NO';
-        if(forn && (netto>0||lordo>0) && scad){
-          allData.uscite.push({
-            forn:String(forn), desc:String(desc), nfatt:String(nfatt),
-            netto, iva, lordo:lordo||netto*(1+iva/100),
-            scad, pagato:String(pagato).toUpperCase()==='SI'
-          });
-        }
+        const forn=row.c[0]?.v;
+        const desc=row.c[1]?.v||'';
+        const nfatt=row.c[2]?.v||'';
+        const netto=parseFloat(row.c[3]?.v)||0;
+        const iva=parseFloat(row.c[4]?.v)||0;
+        const lordo=parseFloat(row.c[5]?.v)||0;
+        const scad=parseGvizDate(row.c[8]?.v);
+        const pag=row.c[9]?.v||'NO';
+        if(forn&&(netto>0||lordo>0)&&scad) DB.uscite.push({forn:String(forn),desc:String(desc),nfatt:String(nfatt),netto,iva,lordo:lordo||netto*(1+iva/100),scad,pagato:String(pag).toUpperCase()==='SI'});
       }
-    } catch(e){ allData.uscite = []; }
+    }catch(e){DB.uscite=[];}
 
-    // 4. VENDITE PER MESE
-    allData.vendite = {};
-    const mesiDisp = [];
-    for(const mese of MESI){
-      try {
-        const data = await fetchSheet(VENDITE_ID, mese);
-        const righe = [];
-        for(const row of data.table.rows){
-          const cliente = row.c[0]?.v;
-          const skinem  = parseFloat(row.c[1]?.v)||0;
-          const skinn   = parseFloat(row.c[2]?.v)||0;
-          const iva     = parseFloat(row.c[3]?.v)||22;
-          const lordo   = skinem + skinn;
-          if(cliente && lordo>0) righe.push({cliente:String(cliente), lordo, iva});
-        }
-        if(righe.length>0){ allData.vendite[mese]=righe; mesiDisp.push(mese); }
-      } catch(e){}
-    }
+    // MESI CON DATI
+    const mesiConDati=[...new Set(DB.vendite.map(v=>v.mese))].filter(m=>MESI.includes(m)).sort((a,b)=>MESI.indexOf(a)-MESI.indexOf(b));
+    if(mesiConDati.length===0) mesiConDati.push('Maggio');
 
-    // Tabs mesi
-    const tabsHtml = mesiDisp.map(m =>
-      `<button class="mese-tab${m===meseAttivo?' active':''}" data-mese="${m}" onclick="renderMese('${m}')">${m}</button>`
-    ).join('');
-    document.getElementById('meseTabs').innerHTML = tabsHtml;
-
-    if(mesiDisp.length>0){
-      if(!mesiDisp.includes(meseAttivo)) meseAttivo = mesiDisp[mesiDisp.length-1];
-      renderMese(meseAttivo);
-    }
+    const tabsHtml=mesiConDati.map(m=>`<button class="mese-tab${m===meseAttivo?' active':''}" data-mese="${m}" onclick="renderMese('${m}')">${m}</button>`).join('');
+    document.getElementById('meseTabs').innerHTML=tabsHtml;
+    if(!mesiConDati.includes(meseAttivo)) meseAttivo=mesiConDati[mesiConDati.length-1];
+    renderMese(meseAttivo);
 
     dot.className='dot ok';
-    st.textContent = `${mesiDisp.length} mesi · ${new Date().toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'})}`;
-
-  } catch(err){
-    dot.className='dot err';
-    st.textContent = 'Errore connessione';
+    st.textContent=`${mesiConDati.length} mesi · ${new Date().toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'})}`;
+  }catch(err){
+    dot.className='dot err'; st.textContent='Errore connessione';
     console.error(err);
   }
 }
 
 function renderMese(mese){
-  meseAttivo = mese;
-  document.querySelectorAll('.mese-tab').forEach(t => t.classList.toggle('active', t.dataset.mese===mese));
+  meseAttivo=mese;
+  document.querySelectorAll('.mese-tab').forEach(t=>t.classList.toggle('active',t.dataset.mese===mese));
+  const meseNum=MESI_NUM[mese];
 
-  const meseNum = MESI_NUM[mese];
-  const righeVendite = allData.vendite[mese]||[];
-
-  // Calcola vendite
-  let totLordo=0, totNetto=0, totIva=0;
-  const clientiCalc = righeVendite.map(r => {
-    const netto = r.iva>0 ? r.lordo/(1+r.iva/100) : r.lordo;
-    const iva   = r.lordo - netto;
-    totLordo += r.lordo; totNetto += netto; totIva += iva;
-    return {...r, netto, iva_eur:iva};
+  // Vendite del mese
+  const rv=DB.vendite.filter(v=>v.mese===mese);
+  let totLordo=0,totNetto=0,totIva=0;
+  const clientiCalc=rv.map(r=>{
+    const netto=r.iva>0?r.lordo/(1+r.iva/100):r.lordo;
+    const iva=r.lordo-netto;
+    totLordo+=r.lordo; totNetto+=netto; totIva+=iva;
+    return{...r,netto,iva_eur:iva};
   });
 
   // Entrate del mese
-  const entrateDelMese = allData.entrate.filter(e => e.mese===mese);
-  const totEntrate = entrateDelMese.reduce((s,e)=>s+e.imp,0);
+  const re=DB.entrate.filter(e=>e.mese===mese);
+  const totEntrate=re.reduce((s,e)=>s+e.imp,0);
 
-  // Uscite del mese (scadenza nel mese corrente)
-  const usciteDelMese = allData.uscite.filter(u => {
-    if(!u.scad) return false;
-    return u.scad.getMonth()===meseNum;
-  }).sort((a,b) => a.scad-b.scad);
-  const totUscite = usciteDelMese.reduce((s,u)=>s+(u.lordo||0),0);
+  // Uscite del mese (scadenza nel mese)
+  const ru=DB.uscite.filter(u=>u.scad&&u.scad.getMonth()===meseNum).sort((a,b)=>a.scad-b.scad);
+  const totUscite=ru.reduce((s,u)=>s+(u.lordo||0),0);
 
-  const totFissi  = allData.fissi;
-  const totTarget = totFissi + totUscite;
-  const totDisp   = totNetto + totEntrate;
-  const risultato = totDisp - totTarget;
-  const percCop   = totTarget>0 ? Math.min((totDisp/totTarget)*100,100) : 0;
-  const manca     = Math.max(totTarget-totDisp,0);
+  const totTarget=DB.fissi+totUscite;
+  const totDisp=totNetto+totEntrate;
+  const risultato=totDisp-totTarget;
+  const percCop=totTarget>0?Math.min((totDisp/totTarget)*100,100):0;
+  const manca=Math.max(totTarget-totDisp,0);
 
   // HERO
-  const hero = document.getElementById('hero');
-  hero.className = 'hero ' + (risultato>=0?'positivo':'negativo');
-  document.getElementById('heroVal').textContent = fEur(risultato);
-  document.getElementById('heroSub').innerHTML = risultato>=0
-    ? `✅ In attivo — ${mese} 2026`
-    : `⚠️ In perdita di ${fEur(Math.abs(risultato))} — ${mese} 2026`;
+  const hero=document.getElementById('hero');
+  hero.className='hero '+(risultato>=0?'pos':'neg');
+  document.getElementById('heroVal').textContent=fEur(risultato);
+  document.getElementById('heroSub').innerHTML=risultato>=0?`✅ In attivo — ${mese} 2026`:`⚠️ In perdita di ${fEur(Math.abs(risultato))} — ${mese} 2026`;
 
   // BARRA
-  document.getElementById('coverPerc').textContent = Math.round(percCop)+'%';
-  document.getElementById('barFill').style.width = percCop+'%';
-  document.getElementById('coverManca').textContent = fEur(manca);
-  document.getElementById('coverTarget').textContent = fEur(totTarget);
+  document.getElementById('coverPerc').textContent=Math.round(percCop)+'%';
+  document.getElementById('barFill').style.width=percCop+'%';
+  document.getElementById('coverManca').textContent=fEur(manca);
+  document.getElementById('coverTarget').textContent=fEur(totTarget);
 
   // CARD
-  document.getElementById('cLordo').textContent   = fEur(totLordo);
-  document.getElementById('cNetto').textContent   = fEur(totNetto);
-  document.getElementById('cEntrate').textContent = fEur(totEntrate);
-  document.getElementById('cFissi').textContent   = fEur(totFissi);
-  document.getElementById('cUscite').textContent  = fEur(totUscite);
+  document.getElementById('cLordo').textContent=fEur(totLordo);
+  document.getElementById('cNetto').textContent=fEur(totNetto);
+  document.getElementById('cEntrate').textContent=fEur(totEntrate);
+  document.getElementById('cFissi').textContent=fEur(DB.fissi);
+  document.getElementById('cUscite').textContent=fEur(totUscite);
 
   // CLIENTI
-  const sorted = [...clientiCalc].sort((a,b)=>b.lordo-a.lordo);
-  if(sorted.length===0){
-    document.getElementById('listVendite').innerHTML='<div class="empty">Nessuna vendita per '+mese+'</div>';
-  } else {
-    document.getElementById('listVendite').innerHTML = sorted.map((r,i) => {
-      const rc = i===0?'gold':i===1?'silver':i===2?'bronze':'';
-      const medal = i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1);
+  const sorted=[...clientiCalc].sort((a,b)=>b.lordo-a.lordo);
+  document.getElementById('listVendite').innerHTML=sorted.length===0
+    ?`<div class="empty">Nessuna vendita per ${mese}</div>`
+    :sorted.map((r,i)=>{
+      const rc=i===0?'gold':i===1?'silver':i===2?'bronze':'';
+      const medal=i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1);
       return `<div class="item-row">
         <div class="item-rank ${rc}">${medal}</div>
-        <div class="item-info">
-          <div class="item-name">${r.cliente}</div>
-          <div class="item-sub">Netto: ${fEur(r.netto)} · IVA: ${fEur(r.iva_eur)}</div>
-        </div>
-        <div class="item-amount">
-          <div class="item-main">${fEur(r.lordo)}</div>
-          <div class="item-sec">lordo</div>
-        </div>
+        <div class="item-info"><div class="item-name">${r.cliente}</div><div class="item-sub">Netto: ${fEur(r.netto)} · IVA: ${fEur(r.iva_eur)}</div></div>
+        <div class="item-amount"><div class="item-main">${fEur(r.lordo)}</div><div class="item-sec">lordo</div></div>
       </div>`;
     }).join('');
-  }
 
-  // ENTRATE RICORRENTI
-  if(entrateDelMese.length===0){
-    document.getElementById('listEntrate').innerHTML='<div class="empty">Nessuna entrata ricorrente per '+mese+'</div>';
-  } else {
-    document.getElementById('listEntrate').innerHTML = entrateDelMese.map(e => {
-      const badge = e.incassato
-        ? '<span class="badge verde">✓ Incassato</span>'
-        : '<span class="badge grigio">In attesa</span>';
+  // ENTRATE
+  document.getElementById('listEntrate').innerHTML=re.length===0
+    ?`<div class="empty">Nessuna entrata ricorrente per ${mese}</div>`
+    :re.map(e=>{
+      const badge=e.incassato?'<span class="badge verde">✓ Incassato</span>':'<span class="badge grigio">In attesa</span>';
       return `<div class="item-row">
         <div class="item-rank">🔄</div>
-        <div class="item-info">
-          <div class="item-name">${e.desc}</div>
-          <div class="item-sub">${e.tipo}${e.data?' · '+e.data:''} ${badge}</div>
-        </div>
-        <div class="item-amount">
-          <div class="item-main" style="color:var(--verde)">${fEur(e.imp)}</div>
-        </div>
+        <div class="item-info"><div class="item-name">${e.desc}</div><div class="item-sub">${e.tipo} ${badge}</div></div>
+        <div class="item-amount"><div class="item-main" style="color:var(--verde)">${fEur(e.imp)}</div></div>
       </div>`;
     }).join('');
-  }
 
-  // USCITE SCADENZE
-  const oggi = new Date();
-  if(usciteDelMese.length===0){
-    document.getElementById('listUscite').innerHTML='<div class="empty">Nessuna scadenza per '+mese+'</div>';
-  } else {
-    document.getElementById('listUscite').innerHTML = usciteDelMese.map(u => {
-      const giorno = u.scad.getDate();
-      const mese_s = MESI[u.scad.getMonth()].substring(0,3);
-      const urgente = !u.pagato && u.scad <= oggi;
-      const badge = u.pagato
-        ? '<span class="badge verde">✓ Pagato</span>'
-        : urgente
-          ? '<span class="badge rosso">⚠ Scaduta</span>'
-          : '<span class="badge grigio">Da pagare</span>';
-      return `<div class="scadenza-row">
-        <div class="scad-date">
-          <div class="scad-day ${urgente?'urgente':''}">${giorno}</div>
-          <div class="scad-month">${mese_s}</div>
-        </div>
-        <div class="scad-info">
-          <div class="scad-name">${u.forn}</div>
-          <div class="scad-desc">${u.desc} ${u.nfatt?'· '+u.nfatt:''} ${badge}</div>
-        </div>
-        <div class="scad-amount">
-          <div class="scad-lordo">${fEur(u.lordo)}</div>
-          <div class="scad-netto">netto ${fEur(u.netto)}</div>
-        </div>
+  // USCITE
+  const oggi=new Date();
+  document.getElementById('listUscite').innerHTML=ru.length===0
+    ?`<div class="empty">Nessuna scadenza per ${mese}</div>`
+    :ru.map(u=>{
+      const g=u.scad.getDate();
+      const ms=MESI[u.scad.getMonth()].substring(0,3);
+      const urgente=!u.pagato&&u.scad<=oggi;
+      const badge=u.pagato?'<span class="badge verde">✓ Pagato</span>':urgente?'<span class="badge rosso">⚠ Scaduta</span>':'<span class="badge grigio">Da pagare</span>';
+      return `<div class="scad-row">
+        <div class="scad-date"><div class="scad-day">${g}</div><div class="scad-month">${ms}</div></div>
+        <div class="scad-info"><div class="scad-name">${u.forn}</div><div class="scad-desc">${u.desc} ${badge}</div></div>
+        <div class="scad-amount"><div class="scad-lordo">${fEur(u.lordo)}</div><div class="scad-netto">netto ${fEur(u.netto)}</div></div>
       </div>`;
     }).join('');
-  }
 }
 
 loadAll();
-setInterval(loadAll, 5*60*1000);
+setInterval(loadAll,5*60*1000);
 </script>
 </body>
 </html>
