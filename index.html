@@ -165,7 +165,7 @@ async function loadAll(){
     DB.fissi=0;
     for(const row of fissiData.table.rows){
       const v=parseFloat(row.c[1]?.v)||0;
-      if(row.c[0]?.v&&v>0) DB.fissi+=v;
+      if(row.c[0]?.v&&v>0&&!String(row.c[0].v).toUpperCase().includes("TOTALE")) DB.fissi+=v;
     }
 
     // VENDITE
